@@ -1,0 +1,43 @@
+import tkinter as tk
+
+def area():
+        texto_de_numa = entrada_numa.get()
+        texto_de_numb = entrada_numb.get()
+        numero_a = int(texto_de_numa)
+        numero_b = int(texto_de_numb)
+        suma = (numero_a * numero_b)/2
+        if suma>100:
+                etiqueta_resultado_area.config(text=f"El area es grande")
+        else:
+                etiqueta_resultado_area.config(text=f"El area es chica")
+
+ventana = tk.Tk()
+ventana.title("calculadora")
+ventana.geometry("400x250")
+ventana.configure(background='white')
+
+etiqueta_numa = tk.Label(ventana, text="Ingresa el primer numero")
+etiqueta_numa.pack()
+etiqueta_numa.configure(background="white")
+
+entrada_numa = tk.Entry(ventana)
+entrada_numa.pack()
+entrada_numa.configure(background='white')
+
+etiqueta_numb = tk.Label(ventana, text="Ingresa el segundo numero")
+etiqueta_numb.pack()
+etiqueta_numb.configure(background='white')
+
+entrada_numb = tk.Entry(ventana)
+entrada_numb.pack()
+entrada_numb.configure(background='white')
+
+boton_area = tk.Button(ventana, text="calcular", command=area)
+boton_area.pack()
+boton_area.configure( highlightbackground="blue", highlightthickness=0)
+
+etiqueta_resultado_area = tk.Label(ventana, text="",)
+etiqueta_resultado_area.pack()
+etiqueta_resultado_area.configure(background='white')
+
+ventana.mainloop()
