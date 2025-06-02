@@ -1,0 +1,18 @@
+class Triangulo:
+    def __init__(self):
+        # Ya definido: atributos base y altura
+        self.base = 0
+        self.altura = 0
+
+    def leer_datos(self):
+        self.base = float(input("Ingrese La Base Del Triangulo: "))
+        self.altura = float(input("Ingrese La Altura Del Triangulo: "))
+        
+    def calcular_area(self):
+      return(self.base * self.altura) / 2 
+    
+t= Triangulo()
+
+t.leer_datos()
+
+print(t.calcular_area())
